@@ -342,7 +342,7 @@ Thanks goes to these amazing people:
 
 ## Security
 
-Tracer is designed with production environments in mind:
+OpenSRE is designed with production environments in mind:
 
 - No storing of raw log data beyond the investigation session
 - All LLM calls use structured, auditable prompts
