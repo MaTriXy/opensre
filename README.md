@@ -403,6 +403,13 @@ Thanks goes to these amazing people:
             <sub><b>ramandagar</b></sub>
         </a>
     </td>
+            <td align="center">
+        <a href="https://github.com/mvanhorn">
+            <img src="https://avatars.githubusercontent.com/u/455140?v=4" width="100" alt="mvanhorn"/>
+            <br />
+            <sub><b>mvanhorn</b></sub>
+        </a>
+    </td>
 		</tr>
 	</tbody>
 </table>
