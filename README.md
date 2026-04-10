@@ -455,6 +455,13 @@ Thanks goes to these amazing people:
             <sub><b>Bahtya</b></sub>
         </a>
     </td>
+            <td align="center">
+        <a href="https://github.com/mayankbharati-ops">
+            <img src="https://avatars.githubusercontent.com/u/245952278?v=4" width="100" alt="mayankbharati-ops"/>
+            <br />
+            <sub><b>mayankbharati-ops</b></sub>
+        </a>
+    </td>
 		</tr>
 	</tbody>
 </table>
