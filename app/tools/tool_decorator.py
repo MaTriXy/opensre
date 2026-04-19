@@ -6,7 +6,7 @@ from collections.abc import Callable
 from typing import Any, TypeVar, cast, overload
 
 from app.tools.base import BaseTool
-from app.tools.registered_tool import REGISTERED_TOOL_ATTR, RegisteredTool
+from app.tools.registered_tool import REGISTERED_TOOL_ATTR, CostTier, RegisteredTool
 from app.types.evidence import EvidenceSource
 
 F = TypeVar("F", bound=Callable[..., Any])
@@ -26,6 +26,8 @@ def tool(
     outputs: dict[str, str] | None = None,
     is_available: Callable[[dict[str, dict]], bool] | None = None,
     extract_params: Callable[[dict[str, dict]], dict[str, Any]] | None = None,
+    tags: tuple[str, ...] | None = None,
+    cost_tier: CostTier | None = None,
 ) -> BaseTool:
     pass
 
@@ -44,6 +46,8 @@ def tool(  # noqa: UP047
     outputs: dict[str, str] | None = None,
     is_available: Callable[[dict[str, dict]], bool] | None = None,
     extract_params: Callable[[dict[str, dict]], dict[str, Any]] | None = None,
+    tags: tuple[str, ...] | None = None,
+    cost_tier: CostTier | None = None,
 ) -> F:
     pass
 
@@ -62,6 +66,8 @@ def tool(  # noqa: UP047
     outputs: dict[str, str] | None = None,
     is_available: Callable[[dict[str, dict]], bool] | None = None,
     extract_params: Callable[[dict[str, dict]], dict[str, Any]] | None = None,
+    tags: tuple[str, ...] | None = None,
+    cost_tier: CostTier | None = None,
 ) -> Callable[[F], F]:
     pass
 
@@ -79,6 +85,8 @@ def tool(  # noqa: UP047
     outputs: dict[str, str] | None = None,
     is_available: Callable[[dict[str, dict]], bool] | None = None,
     extract_params: Callable[[dict[str, dict]], dict[str, Any]] | None = None,
+    tags: tuple[str, ...] | None = None,
+    cost_tier: CostTier | None = None,
 ) -> Any:
     """Register a lightweight function tool or annotate an existing BaseTool.
 
@@ -99,15 +107,22 @@ def tool(  # noqa: UP047
             bool(outputs),
             is_available is not None,
             extract_params is not None,
+            bool(tags),
+            cost_tier is not None,
         ])
 
     def attach(target: F | BaseTool) -> F | BaseTool:
         if isinstance(target, BaseTool):
-            if surfaces is not None:
+            if surfaces is not None or tags is not None or cost_tier is not None:
                 setattr(
                     target,
                     REGISTERED_TOOL_ATTR,
-                    RegisteredTool.from_base_tool(target, surfaces=surfaces),
+                    RegisteredTool.from_base_tool(
+                        target,
+                        surfaces=surfaces,
+                        tags=tags,
+                        cost_tier=cost_tier,
+                    ),
                 )
             return target
 
@@ -127,6 +142,8 @@ def tool(  # noqa: UP047
                     outputs=outputs,
                     is_available=is_available,
                     extract_params=extract_params,
+                    tags=tags,
+                    cost_tier=cost_tier,
                 ),
             )
         return target
