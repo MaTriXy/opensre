@@ -656,6 +656,13 @@ Thanks goes to these amazing people:
             <sub><b>daxp472</b></sub>
         </a>
     </td>
+            <td align="center">
+        <a href="https://github.com/Som-0619">
+            <img src="https://avatars.githubusercontent.com/u/143019791?v=4" width="100" alt="Som-0619"/>
+            <br />
+            <sub><b>Som-0619</b></sub>
+        </a>
+    </td>
 		</tr>
 	</tbody>
 </table>
