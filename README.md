@@ -663,6 +663,13 @@ Thanks goes to these amazing people:
             <sub><b>Som-0619</b></sub>
         </a>
     </td>
+            <td align="center">
+        <a href="https://github.com/Gust-svg">
+            <img src="https://avatars.githubusercontent.com/u/265007695?v=4" width="100" alt="Gust-svg"/>
+            <br />
+            <sub><b>Gust-svg</b></sub>
+        </a>
+    </td>
 		</tr>
 	</tbody>
 </table>
