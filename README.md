@@ -162,11 +162,7 @@ If you use VS Code, the repo now includes a ready-to-use devcontainer under [`.d
 
 ## How OpenSRE Works
 
-<img
-  alt="tracer-how-it-works-illustration"
-  src="https://github.com/user-attachments/assets/8b50fe5c-470c-4982-866f-4f90c3e251d1"
-  style="width: 100%; height: auto;"
-/>
+<img width="1064" height="568" alt="opensre-how-it-works" src="https://github.com/user-attachments/assets/04234934-c603-491e-a08f-b145d1158d7a" />
 
 ### Investigation Workflow
 
