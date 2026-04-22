@@ -725,6 +725,15 @@ Thanks goes to these amazing people:
         </a>
     </td>
 		</tr>
+		<tr>
+            <td align="center">
+        <a href="https://github.com/Maharshi-Project">
+            <img src="https://avatars.githubusercontent.com/u/156591746?v=4" width="100" alt="Maharshi-Project"/>
+            <br />
+            <sub><b>Maharshi-Project</b></sub>
+        </a>
+    </td>
+		</tr>
 	</tbody>
 </table>
 <!-- readme: contributors -end -->
